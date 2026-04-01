@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>movies</title>
+  <link rel="stylesheet" href="movies.css">
+</head>
+
+<body data-category="movies">
+
+  <nav class="navbar">
+
+    <!-- LEFT TEXT (unchanged) -->
+    <div class="nav-left">
+      CINEMA • SPORT • LITERATURE
+    </div>
+
+    <!-- RIGHT PILL -->
+    <div class="nav-pill">
+
+      <div class="logo-box">☀</div>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="sports.html">Sports</a>
+        <a href="books.html">Books</a>
+      </div>
+
+      <a href="about.html" class="cta-btn">
+        About →
+      </a>
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+  <section class="movies-hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <p class="section-label">CATEGORY</p>
+      <h1>Movies</h1>
+      <p class="subtitle">Cinema as memory, mood, and meaning.</p>
+    </div>
+  </section>
+
+  <!-- ARTICLES -->
+  <section class="movies-grid"
+
+    <div id="blog-container" class="blog-container"></div>
+
+  </section>
+  
+  <footer class="footer">
+    <p>"Bad times don't last but bad people do"</p>
+    <span>— Scott Hall</span>
+  </footer>
+
+    <!-- ADD BUTTON -->
+  <div class="add-btn" id="add-btn">+</div>
+
+  <!-- EDITOR MODAL -->
+  <div id="editor-modal" class="editor hidden">
+    <div class="editor-box">
+
+      <h2>Add New Insight</h2>
+
+      <input id="blog-title" placeholder="Title">
+
+      <input type="file" id="blog-image">
+      <img id="image-preview" style="display:none; width:100%; border-radius:10px;">
+
+      <textarea id="blog-content" placeholder="Write your insight..."></textarea>
+
+      <div class="editor-actions">
+        <button id="publish-btn">Publish</button>
+        <button id="cancel-btn">Cancel</button>
+      </div>
+
+    </div>
+  </div>
+
+    <!-- BLOG DISPLAY -->
+
+  <div id="blog-view" class="fullscreen hidden">
+    <div class="blog-view-box">
+      <h2 id="view-title"></h2>
+      <img id="view-image">
+      <p id="view-content"></p>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>

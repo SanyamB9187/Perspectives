@@ -1,0 +1,23 @@
+-----> The card html: <------
+
+    <!-- BIG CARD
+    <div class="card big">
+      <img src="images/books1.jpg" alt="">
+      <div class="card-content">
+        <p class="tag">books</p>
+        <h2>The Beautiful Game's Ugly Truth</h2>
+        <p>How the 2026 World Cup qualifier became a reflection of modern football.</p>
+        <span>8.5/10 · Mar 10, 2026</span>
+      </div>
+    </div> -->
+
+    <!-- SMALL CARD
+    <div class="card">
+      <img src="images/books2.jpg" alt="">
+      <div class="card-content">
+        <p class="tag">books</p>
+        <h3>The Last Dynasty</h3>
+        <p>Reflecting on the end of the Golden State Warriors era.</p>
+        <span>8/10 · Feb 15, 2026</span>
+      </div>
+    </div> -->

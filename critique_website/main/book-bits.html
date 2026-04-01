@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Book Bits</title>
+    <link rel="stylesheet" href="book-bits.css">
+</head>
+
+<body class="book-bits-page">
+
+    <nav class="navbar">
+        <div class="nav-inner">
+
+            <div class="nav-left">
+                CINEMA • SPORT • LITERATURE
+            </div>
+
+            <div class="nav-pill">
+                <div class="logo-box">☀</div>
+
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="movies.html">Movies</a>
+                    <a href="sports.html">Sports</a>
+                    <a href="books.html">Books</a>
+                </div>
+
+                <a href="about.html" class="cta-btn">
+                    About →
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="book-bits-hero">
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h1>Book Bits</h1>
+            <p>Fragments of thought, captured from pages</p>
+        </div>
+    </div>
+
+    <div class="quotes-container">
+        <div class="quote-card"></div>
+    </div>
+
+    <div id="fullscreen-view" class="fullscreen hidden">
+        <span class="close-btn" onclick="closeFullscreen()">×</span>
+        <img id="fullscreen-img">
+    </div>
+
+    <footer class="footer">
+        <p>"Bad times don't last but bad people do"</p>
+        <span>— Scott Hall</span>
+    </footer>
+
+    <!-- ADD BUTTON -->
+    <div class="add-btn" id="add-btn">+</div>
+
+    <!-- EDITOR MODAL -->
+    <div id="editor-modal" class="editor hidden">
+        <div class="editor-box">
+            <h2>Add a book bit</h2>
+            <input type="file" id="bit-image">
+            <img id="image-preview" style="display:none; width:100%; border-radius:10px;">
+            <textarea id="bit-caption" placeholder="Write caption..."></textarea>
+            <div class="editor-actions">
+                <button id="publish-bit-btn">Publish</button>
+                <button id="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOG DISPLAY -->
+
+    <!-- <div id="blog-view" class="fullscreen hidden">
+        <div class="blog-view-box">
+            <h2 id="view-title"></h2>
+            <img id="view-image">
+            <p id="view-content"></p>
+        </div>
+    </div> -->
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
