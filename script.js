@@ -1,8 +1,8 @@
-import { db, storage } from "./firebase.js";
-import { renderBlogs, saveBlog, loadArticle } from "./blogService.js";
-import { initFullscreen } from "./ui/fullscreen.js";
-import { renderHomepageArticles } from "./pages/home.js";
-import { renderBookBits, saveBookBit } from "./pages/bookbits.js";
+import { db, storage } from "./critique_website/main/js/firebase.js";
+import { renderBlogs, saveBlog, loadArticle } from "./critique_website/main/js/blogService.js";
+import { initFullscreen } from "./critique_website/main/js/ui/fullscreen.js";
+import { renderHomepageArticles } from "./critique_website/main/pages/home.js";
+import { renderBookBits, saveBookBit } from "./critique_website/main/js/pages/bookbits.js";
 import { initSlider } from "./ui/slider.js";
 import { initEditor, openEditor, closeEditor, getSelectedImage } from "./ui/editor.js";
 import {
