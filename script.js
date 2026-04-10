@@ -129,9 +129,9 @@ window.addEventListener("DOMContentLoaded", function () {
     renderBlogs();
   }
 
-  if (window.location.pathname.includes("/critique_website/main/article.html")) {
-    loadArticle();
-  }
+  if (window.location.pathname.includes("article.html")) {
+  loadArticle();
+}
 
   if (document.body.classList.contains("book-bits-page")) {
     renderBookBits();
