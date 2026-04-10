@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Article</title>
   <link rel="stylesheet" href="books.css">
 </head>
+
 <body>
 
   <nav class="navbar">
@@ -25,19 +27,30 @@
   </nav>
 
   <!-- ARTICLE -->
+   
   <section class="article-page">
+    
     <p class="tag" id="article-category">BOOKS</p>
     <h1 id="article-title"></h1>
-    <span id="article-date"></span>
+    <div class="article-meta">
+      <span id="article-date"></span>
+      <span class="dot">•</span>
+      <span id="article-author"></span>
+    </div>
 
-    <img id="article-image">
+    <img id="article-image" class="article-image">
 
-    <div id="article-content"></div>
-    
-    <button id="delete-article-btn">Delete Article</button>
+    <div id="article-content" class="article-content"></div>
+
+    <div class="article-end">
+      — End of Article —
+    </div>
+
+    <!-- <button id="delete-article-btn">Delete Article</button> -->
   </section>
-  
-  <script type="module" src="script.js"></script>
+
+  <script type="module" src="./js/script.js"></script>
 
 </body>
+
 </html>

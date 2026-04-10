@@ -61,6 +61,10 @@
     <!-- ADD BUTTON -->
   <div class="add-btn" id="add-btn">+</div>
 
+  <div class="add-hint" id="addHint">
+    Click + to add a new article
+  </div>
+
   <!-- EDITOR MODAL -->
   <div id="editor-modal" class="editor hidden">
     <div class="editor-box">
@@ -68,6 +72,8 @@
       <h2>Add New Insight</h2>
 
       <input id="blog-title" placeholder="Title">
+
+      <input type="text" id="author-name" placeholder="Author Name" required>
 
       <input type="file" id="blog-image">
       <img id="image-preview" style="display:none; width:100%; border-radius:10px;">
@@ -92,7 +98,7 @@
     </div>
   </div>
 
-  <script type="module" src="script.js"></script>
+  <script type="module" src="js/script.js"></script>
 </body>
 
 </html>

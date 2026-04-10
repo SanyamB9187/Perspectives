@@ -113,8 +113,10 @@ body {
 
   border-radius: 12px;
 
-  background: rgba(255,255,255,0.16);
-  color: #fff;
+  background: linear-gradient(180deg, #e5ab38, #d8a83f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   font-size: 15px;
 
@@ -130,12 +132,15 @@ body {
 .nav-links a {
   text-decoration: none;
   font-size: 14px;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   transition: 0.25s;
 }
 
 .nav-links a:hover {
-  color: #fff;
+  background: linear-gradient(180deg, #e5ab38, #d8a83f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ===== CTA ===== */
@@ -173,8 +178,21 @@ body {
   inset: 0;
 
   background:
-    radial-gradient(circle at 50% 30%, rgba(255,170,100,0.18), transparent 50%),
-    linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.9) 85%);
+    linear-gradient(
+      to right,
+      rgba(0,0,0,0.85) 0%,
+      rgba(0,0,0,0.65) 35%,
+      rgba(0,0,0,0.35) 60%,
+      rgba(0,0,0,0.1) 80%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.6),
+      transparent 50%
+    );
+
+  z-index: 1;
 }
 
 /* TOP GLOW */
@@ -244,6 +262,13 @@ body {
   height: 500px;
   background: #0c0c0c;
   cursor: pointer;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
 /* IMAGE */
@@ -252,7 +277,7 @@ body {
   height: 100%;
   object-fit: cover;
 
-  filter: brightness(0.55) contrast(1.1) saturate(0.9);
+  filter: brightness(0.85) contrast(1.1) saturate(0.9);
   transition: all 0.6s ease;
 }
 
@@ -342,7 +367,7 @@ body {
   height: 65px;
   border-radius: 50%;
 
-  background: linear-gradient(135deg, #c4a5a5, #690cac);
+  background: linear-gradient(135deg, #26b70c, #ecc712);
   color: white;
   font-size: 32px;
 
@@ -361,9 +386,80 @@ body {
 }
 
 .add-btn:hover {
-  transform: scale(1.1) rotate(90deg);
-  background: white;
+  transform: scale(1.1) ;
+  background: rgb(150, 228, 124);
   color: black;
+}
+
+.add-btn::after {
+  content: "Add a new article";
+
+  position: fixed;
+  bottom: 80px;
+  right: 0;
+
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+
+  padding: 6px 10px;
+  border-radius: 15px;
+
+  font-size: 18px;
+
+  opacity: 0;
+  transform: translateY(10px);
+
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+/* show on hover */
+.add-btn:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HINT BUBBLE */
+.add-hint {
+  position: absolute;
+
+  right: 70px;   /* pushes it to LEFT of button */
+  bottom: 50%;   /* vertically align */
+  transform: translateY(50%);
+
+  padding: 8px 14px;
+  border-radius: 12px;
+
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+
+  color: #fff;
+  font-size: 13px;
+
+  white-space: nowrap;   
+
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* visible state */
+.add-hint.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.add-hint::after {
+  content: "";
+  position: absolute;
+
+  right: -5px;   /* arrow on right side */
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+
+  width: 10px;
+  height: 10px;
+
+  background: rgba(0, 0, 0, 0.75);
 }
 
 /* MODAL */
@@ -387,17 +483,17 @@ body {
 
 /* BOX */
 .editor-box {
-  width: 700px;
-  max-height: 85vh;
-  overflow-y: auto;
+  width: 900px;           
+  max-width: 95%;
+  max-height: 90vh;
 
-  padding: 35px; /* increased from 25px */
+  padding: 40px;
   border-radius: 20px;
 
-  background: rgba(20,20,20,0.7);
+  background: rgba(20,20,20,0.75);
   backdrop-filter: blur(20px);
 
-  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+  box-shadow: 0 25px 80px rgba(0,0,0,0.8);
 }
 
 .editor-box::before {
@@ -439,10 +535,20 @@ body {
 /* TEXTAREA */
 #blog-content {
   width: 100%;
-  height: 220px; /* 🔥 bigger */
+  height: 220px;   
+  
+  padding: 16px;
+  border-radius: 14px;
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
   resize: none;
-  padding: 12px;
-  border-radius: 10px;
 }
 
 /* ACTION BUTTONS STICKY */
@@ -460,7 +566,7 @@ body {
 .editor-box input,
 .editor-box textarea {
   width: 100%;
-  margin-top: 14px;
+  margin-top: 16px;
 
   background: rgba(255,255,255,0.04);
   color: white;
@@ -670,4 +776,166 @@ body {
 
 #delete-article-btn:hover {
   background: #ff1a1a;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  /* Navbar */
+  .navbar {
+    padding: 20px 40px;
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 72px;
+  }
+
+  /* Feature grid */
+  .feature-grid {
+    gap: 20px;
+  }
+
+  /* Section blocks */
+  .section-block {
+    gap: 40px;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+  padding: 20px;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-left {
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.nav-pill {
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  gap: 12px;
+}
+
+.nav-links a {
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-left: 20px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 14px;
+    max-width: 90%;
+  }
+}
+
+.feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    height: 220px;
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    height: 220px;
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .article-page {
+    margin: 100px 20px;
+  }
+
+  .article-page h1 {
+    font-size: 32px;
+  }
+
+  .article-page p {
+    font-size: 16px;
+  }
+
+  .section-block {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .section-block.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .section-text h2 {
+    font-size: 36px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+  /* HERO */
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  /* NAV */
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  /* CARDS */
+  .card {
+    height: 180px;
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  /* TEXT */
+  .section-text h2 {
+    font-size: 28px;
+  }
+
+  /* ARTICLE */
+  .article-page h1 {
+    font-size: 26px;
+  }
+
+  .article-page p {
+    font-size: 15px;
+  }
+
 }
