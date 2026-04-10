@@ -129,7 +129,7 @@ window.addEventListener("DOMContentLoaded", function () {
     renderBlogs();
   }
 
-  if (window.location.pathname.includes("article.html")) {
+  if (window.location.pathname.includes("/critique_website/main/article.html")) {
     loadArticle();
   }
 
