@@ -849,6 +849,7 @@ body {
   font-size: 1.05rem;
   line-height: 1.8;
   color: #e5e7eb;
+  text-align: justify;
 }
 
 .article-content p {
