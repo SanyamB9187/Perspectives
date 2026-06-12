@@ -3,11 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Article</title>
-  <link rel="stylesheet" href="./critique_website/main/books.css">
+  <link rel="stylesheet" href="books.css">
 </head>
 
 <body>
+
+  <!-- NAVBAR -->
 
   <nav class="navbar">
     <div class="nav-left">CINEMA • SPORT • LITERATURE</div>
@@ -17,39 +20,106 @@
 
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="./critique_website/main/movies.html">Movies</a>
-        <a href="./critique_website/main/sports.html">Sports</a>
-        <a href="./critique_website/main/books.html">Books</a>
+        <a href="movies.html">Cinema</a>
+        <a href="sports.html">Sports</a>
+        <a href="books.html">Books</a>
       </div>
 
-      <a href="./critique_website/main/about.html" class="cta-btn">About →</a>
+      <a href="about.html" class="cta-btn">About →</a>
     </div>
   </nav>
 
-  <!-- ARTICLE -->
-   
+
+  <!-- ARTICLE PAGE -->
+
   <section class="article-page">
-    
-    <p class="tag" id="article-category">BOOKS</p>
-    <h1 id="article-title"></h1>
-    <div class="article-meta">
-      <span id="article-date"></span>
-      <span class="dot">•</span>
-      <span id="article-author"></span>
+
+    <!-- HERO SECTION -->
+
+    <div class="article-hero">
+
+      <div class="hero-overlay"></div>
+
+      <img id="article-image" class="article-image">
+
+      <div class="hero-content">
+
+        <p class="tag" id="article-category">BOOKS</p>
+
+        <h1 id="article-title"></h1>
+
+        <div class="article-meta">
+          <span id="article-date"></span>
+          <span class="dot">•</span>
+          <span id="article-author"></span>
+        </div>
+
+      </div>
+
     </div>
 
-    <img id="article-image" class="article-image">
+<!-- TRAILER SECTION -->
 
-    <div id="article-content" class="article-content"></div>
+<div class="trailer-section">
+
+  <div class="section-heading">
+    Related Video
+  </div>
+
+  <div class="trailer-container">
+
+    <iframe
+      id="article-trailer"
+      src=""
+      title="Movie Trailer"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+
+</div>
+
+
+
+    <!-- ARTICLE CONTENT -->
+
+    <div class="article-content-wrapper">
+
+      <div id="article-content" class="article-content"></div>
+
+    </div>
+
+
+    <!-- OPTIONAL IMAGE GRID
+
+    <div class="article-gallery">
+
+      <img src="images/sample1.jpg" alt="">
+      <img src="images/sample2.jpg" alt="">
+
+    </div> -->
+
+
+    <!-- QUOTE BLOCK
+
+    <div class="quote-block">
+      “Stories are where emotion and meaning collide.”
+    </div> -->
+
+
+    <!-- END -->
 
     <div class="article-end">
       — End of Article —
     </div>
 
     <!-- <button id="delete-article-btn">Delete Article</button> -->
+
   </section>
 
-  <script type="module" src="./critique_website/main/js/script.js"></script>
+  <script type="module" src="./js/script.js"></script>
 
 </body>
 
