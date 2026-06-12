@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Books</title>
   <link rel="stylesheet" href="books.css">
+  <link rel="stylesheet" href="intro-modal.css">
 </head>
 
 <body data-category="books">
@@ -12,7 +14,7 @@
 
     <!-- LEFT TEXT (unchanged) -->
     <div class="nav-left">
-      CINEMA • SPORT • LITERATURE
+      READ • WRITE • INSPIRE
     </div>
 
     <!-- RIGHT PILL -->
@@ -21,8 +23,8 @@
       <div class="logo-box">☀</div>
 
       <div class="nav-links">
-        <a href="../../index.html">Home</a>
-        <a href="movies.html">Movies</a>
+        <a href="index.html">Home</a>
+        <a href="movies.html">Cinema</a>
         <a href="sports.html">Sports</a>
         <a href="books.html">Books</a>
       </div>
@@ -37,7 +39,7 @@
   <!-- HERO -->
   <section class="books-hero">
     <div class="overlay"></div>
-    <div class="hero-content">
+    <div class="hero-content-main">
       <p class="section-label">CATEGORY</p>
       <h1>Books</h1>
       <p class="subtitle">Words that echo long after the final page.</p>
@@ -48,9 +50,7 @@
 
   <!-- ARTICLES -->
   <section class="books-grid">
-
     <div id="blog-container" class="blog-container"></div>
-
   </section>
 
   <footer class="footer">
@@ -96,6 +96,29 @@
       <img id="view-image">
       <p id="view-content"></p>
     </div>
+  </div>
+
+    <!-- INTRO MODAL -->
+  <div id="intro-overlay" class="intro-overlay hidden" 
+    data-intro-key="homepageIntroSeen"
+    data-intro-label="PERSPECTIVES" 
+    data-intro-title="Welcome to the Books Section" 
+    data-intro-text="Discover articles that explore the world of literature, offering honest reflections and learnings. Whether you're
+        a casual reader or a dedicated book lover, there's something here for everyone who loves the art of storytelling. You can add your own insights by clicking the &quot;+&quot; button at the bottom right. ">
+
+    <div class="intro-modal">
+
+      <span class="intro-label"></span>
+
+      <h2 class="intro-title"></h2>
+
+      <p class="intro-text"></p>
+      <button id="intro-btn" class="intro-btn">
+        Enter
+      </button>
+
+    </div>
+
   </div>
 
   <script type="module" src="js/script.js"></script>
