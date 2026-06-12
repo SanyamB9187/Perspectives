@@ -105,7 +105,7 @@ body {
 
   border-radius: 12px;
 
- background: linear-gradient(180deg, #f5e6c8, #d6b97a);
+  background: linear-gradient(180deg, #f5e6c8, #d6b97a);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -220,6 +220,7 @@ body {
   font-size: 110px;
   line-height: 1;
   font-weight: 500;
+
 }
 
 /* DESCRIPTION */
@@ -423,7 +424,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.card > * {
+.card>* {
   position: relative;
   z-index: 2;
 }
@@ -438,7 +439,7 @@ body {
       rgba(0, 0, 0, 0.1) 70%,
       transparent 100%);
 
-      z-index: 1;
+  z-index: 1;
 }
 
 .card img {
@@ -448,7 +449,8 @@ body {
   height: 100%;
   object-fit: cover;
 
-  z-index: 0; /* 👈 below overlay */
+  z-index: 0;
+  /* 👈 below overlay */
 }
 
 .card .tag {
@@ -806,161 +808,313 @@ body {
 /* Tablets */
 @media (max-width: 1024px) {
 
-  /* Navbar */
+  /* NAVBAR */
   .navbar {
-    padding: 20px 40px;
+    padding: 22px 40px;
+    gap: 40px;
   }
 
-  /* Hero */
+  .nav-left {
+    margin-right: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .nav-pill {
+    gap: 16px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  /* HERO */
+  .hero {
+    padding-left: 50px;
+  }
+
+  .hero-content {
+    max-width: 600px;
+  }
+
   .hero h1 {
-    font-size: 72px;
+    font-size: 82px;
   }
 
-  /* Feature grid */
+  .hero p {
+    font-size: 16px;
+    max-width: 450px;
+  }
+
+  .slider-bars {
+    left: 50px;
+  }
+
+  /* PERSPECTIVE SECTION */
+  .perspective-center {
+    max-width: 700px;
+  }
+
+  .perspective-heading {
+    font-size: clamp(48px, 6vw, 68px);
+  }
+
+  .perspective-text {
+    font-size: 16px;
+  }
+
+  /* FEATURED */
+  .featured {
+    padding: 80px 40px;
+  }
+
+  .section-header h2 {
+    font-size: 48px;
+  }
+
+  .feature-top {
+    height: 280px;
+  }
+
+  .feature-content {
+    padding: 30px;
+  }
+
   .feature-grid {
     gap: 20px;
   }
 
-  /* Section blocks */
+  .card {
+    height: 260px;
+    padding: 24px;
+  }
+
+  .card h3 {
+    font-size: 24px;
+  }
+
+  /* SECTIONS */
+  .sections {
+    padding: 100px 40px;
+  }
+
+  .section-intro {
+    margin-bottom: 120px;
+  }
+
+  .section-title {
+    font-size: 52px;
+  }
+
   .section-block {
     gap: 40px;
+    margin-bottom: 100px;
+  }
+
+  .section-image img {
+    height: 280px;
+  }
+
+  .section-text h2 {
+    font-size: 50px;
+  }
+
+  .section-text p {
+    font-size: 15px;
+  }
+
+  /* QUOTE */
+  .quote-section {
+    padding: 40px;
+  }
+
+  .quote {
+    font-size: 34px;
+  }
+
+  .quote-footer {
+    font-size: 15px;
+    margin-top: 100px;
   }
 
 }
 
 /* Mobile */
-@media (max-width: 768px) {
-  .navbar {
-  padding: 20px;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.nav-left {
-  font-size: 10px;
-  letter-spacing: 2px;
-}
-
-.nav-pill {
-  width: 100%;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.nav-links {
-  gap: 12px;
-}
-
-.nav-links a {
-  font-size: 12px;
-}
 
 @media (max-width: 768px) {
   .hero {
-    padding-left: 20px;
+    padding: 0 24px;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .hero-content {
+    max-width: 100%;
   }
 
   .hero h1 {
-    font-size: 48px;
+    font-size: 56px;
+    line-height: 0.95;
   }
 
   .hero p {
-    font-size: 14px;
-    max-width: 90%;
-  }
-}
-
-.feature-grid {
-    grid-template-columns: 1fr;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 100%;
   }
 
-  .card {
-    height: 220px;
-    padding: 20px;
+  .slider-bars {
+    left: 24px;
+    bottom: 30px;
   }
 
-  .card h3 {
-    font-size: 20px;
+  .bar {
+    width: 45px;
+  }
+
+  .perspective-section {
+    min-height: 100vh;
+    height: auto;
+    padding: 120px 24px;
+  }
+
+  .perspective-heading {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .perspective-text {
+    font-size: 15px;
+  }
+
+  .featured {
+    padding: 80px 24px;
   }
 
   .feature-grid {
     grid-template-columns: 1fr;
   }
 
-  .card {
-    height: 220px;
-    padding: 20px;
+  .section-header h2 {
+    font-size: 40px;
   }
 
-  .card h3 {
-    font-size: 20px;
+  .feature-top {
+    height: 300px;
   }
 
-  .article-page {
-    margin: 100px 20px;
+  .feature-content {
+    padding: 30px;
   }
 
-  .article-page h1 {
-    font-size: 32px;
+  .feature-top h2 {
+    font-size: 22px;
+    line-height: 1.15;
+    max-width: 85%;
   }
 
-  .article-page p {
-    font-size: 16px;
+  .feature-top p {
+    font-size: 14px;
+    line-height: 1.5;
   }
 
-  .section-block {
+  .feature-top .meta {
+    margin-top: 10px;
+  }
+
+  .section-block,
+  .section-block.reverse {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
-  .section-block.reverse {
-    grid-template-columns: 1fr;
+  .section-block.reverse .section-image,
+  .section-block.reverse .section-text {
+    order: unset;
+  }
+
+  .section-image img {
+    height: 240px;
+  }
+
+  .section-text {
+    max-width: 100%;
   }
 
   .section-text h2 {
-    font-size: 36px;
-  }
-}
-
-/* Small phones */
-@media (max-width: 480px) {
-
-  /* HERO */
-  .hero h1 {
-    font-size: 36px;
+    font-size: 42px;
   }
 
-  .hero p {
-    font-size: 13px;
+  .sections {
+    padding: 100px 24px;
   }
 
-  /* NAV */
-  .nav-links a {
-    font-size: 11px;
-  }
-
-  /* CARDS */
   .card {
-    height: 180px;
-    padding: 15px;
+    height: 240px;
   }
 
   .card h3 {
     font-size: 18px;
+    line-height: 1.15;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
   }
 
-  /* TEXT */
-  .section-text h2 {
+  .quote {
     font-size: 28px;
   }
 
-  /* ARTICLE */
-  .article-page h1 {
-    font-size: 26px;
+  .quote-footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    margin-top: 80px;
   }
 
-  .article-page p {
-    font-size: 15px;
+  .quote-footer .left,
+  .quote-footer .right {
+    text-align: center;
   }
 
+  .quote-section {
+    min-height: auto;
+    padding: 100px 24px;
+  }
+
+  .navbar {
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  .nav-left {
+    display: none;
+  }
+
+  .nav-pill {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px 14px;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .cta-btn {
+    font-size: 12px;
+  }
 }
