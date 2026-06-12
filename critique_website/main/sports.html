@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sports</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="sports.css">
+  <link rel="stylesheet" href="intro-modal.css">
 </head>
 <body data-category="sports">
 
@@ -12,7 +14,7 @@
 
   <!-- LEFT TEXT (unchanged) -->
   <div class="nav-left">
-    CINEMA • SPORT • LITERATURE
+    READ • WRITE • INSPIRE
   </div>
 
   <!-- RIGHT PILL -->
@@ -21,8 +23,8 @@
     <div class="logo-box">☀</div>
 
     <div class="nav-links">
-      <a href="../../index.html">Home</a>
-      <a href="movies.html">Movies</a>
+      <a href="index.html">Home</a>
+      <a href="movies.html">Cinema</a>
       <a href="sports.html">Sports</a>
       <a href="books.html">Books</a>
     </div>
@@ -47,9 +49,7 @@
 
 <!-- ARTICLES -->
   <section class="sports-grid">
-
     <div id="blog-container" class="blog-container"></div>
-
   </section>
 
 <footer class="footer">
@@ -95,6 +95,28 @@
       <img id="view-image">
       <p id="view-content"></p>
     </div>
+  </div>
+
+  <!-- INTRO MODAL -->
+  <div id="intro-overlay" class="intro-overlay hidden" 
+    data-intro-key="homepageIntroSeen"
+    data-intro-label="PERSPECTIVES" 
+    data-intro-title="Welcome to the Sports Section" 
+    data-intro-text="Find articles that opens up your menatlity. You can add your own insights about athletes, games, performances and everything else by clicking the &quot;+&quot; button at the bottom right. ">
+
+    <div class="intro-modal">
+
+      <span class="intro-label"></span>
+
+      <h2 class="intro-title"></h2>
+
+      <p class="intro-text"></p>
+      <button id="intro-btn" class="intro-btn">
+        Enter
+      </button>
+
+    </div>
+
   </div>
 
 <script type="module" src="js/script.js"></script>
