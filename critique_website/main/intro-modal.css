@@ -1,0 +1,140 @@
+/* INTRO OVERLAY */
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(10px);
+
+  z-index: 9999;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.6s ease;
+}
+
+/* ACTIVE STATE */
+.intro-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* HIDDEN */
+.hidden {
+  display: none;
+}
+
+/* MODAL */
+.intro-modal {
+  width: 90%;
+  max-width: 650px;
+
+  padding: 50px;
+
+  border-radius: 24px;
+
+  background: rgba(20,20,20,0.78);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.7),
+    inset 0 0 30px rgba(255,255,255,0.03);
+
+  text-align: center;
+
+  transform: translateY(30px);
+  opacity: 0;
+
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.7s ease;
+}
+
+/* MODAL ACTIVE */
+.intro-overlay.show .intro-modal {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* LABEL */
+.intro-label {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  font-size: 11px;
+  letter-spacing: 3px;
+
+  color: rgba(255,255,255,0.45);
+}
+
+/* TITLE */
+.intro-title {
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 1.1;
+
+  margin-bottom: 24px;
+
+  background: linear-gradient(180deg, #f5e6c8, #d6b97a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TEXT */
+.intro-text {
+  font-size: 18px;
+  line-height: 1.8;
+
+  color: rgba(255,255,255,0.72);
+
+  max-width: 540px;
+  margin: 0 auto 40px;
+}
+
+/* BUTTON */
+.intro-btn {
+  padding: 14px 30px;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.intro-btn:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-2px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .intro-modal {
+    padding: 35px 25px;
+  }
+
+  .intro-title {
+    font-size: 36px;
+  }
+
+  .intro-text {
+    font-size: 15px;
+  }
+
+}
