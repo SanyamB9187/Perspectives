@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Bits</title>
     <link rel="stylesheet" href="book-bits.css">
+    <link rel="stylesheet" href="intro-modal.css">
 </head>
 
 <body class="book-bits-page">
@@ -13,15 +15,15 @@
         <div class="nav-inner">
 
             <div class="nav-left">
-                CINEMA • SPORT • LITERATURE
+                READ • WRITE • INSPIRE
             </div>
 
             <div class="nav-pill">
                 <div class="logo-box">☀</div>
 
                 <div class="nav-links">
-                    <a href="../../index.html">Home</a>
-                    <a href="movies.html">Movies</a>
+                    <a href="index.html">Home</a>
+                    <a href="movies.html">Cinema</a>
                     <a href="sports.html">Sports</a>
                     <a href="books.html">Books</a>
                 </div>
@@ -44,7 +46,8 @@
     </div>
 
     <div class="quotes-container">
-        <div class="quote-card"></div>
+        <div class="quote-card">
+        </div>
     </div>
 
     <div id="fullscreen-view" class="fullscreen hidden">
@@ -53,8 +56,8 @@
     </div>
 
     <footer class="footer">
-        <p>"Bad times don't last but bad people do"</p>
-        <span>— Scott Hall</span>
+        <p>"The only way to deal with an unfriendly world is to become friendly."</p>
+        <span>- Ralph Waldo Emerson</span>
     </footer>
 
     <!-- ADD BUTTON -->
@@ -83,6 +86,28 @@
             <p id="view-content"></p>
         </div>
     </div> -->
+
+      <!-- INTRO MODAL -->
+  <div id="intro-overlay" class="intro-overlay hidden" 
+    data-intro-key="homepageIntroSeen"
+    data-intro-label="PERSPECTIVES" 
+    data-intro-title="Welcome to the Books-Bits Section" 
+    data-intro-text="This section includes curated fragments from beloved books. A line or a paragraph that resonates with you or proves a point or makes you understand something better. You can add your own bits and captions by clicking the &quot;+&quot; button at the bottom right. ">
+
+    <div class="intro-modal">
+
+      <span class="intro-label"></span>
+
+      <h2 class="intro-title"></h2>
+
+      <p class="intro-text"></p>
+      <button id="intro-btn" class="intro-btn">
+        Enter
+      </button>
+
+    </div>
+
+  </div>
 
     <script type="module" src="js/script.js"></script>
 </body>
