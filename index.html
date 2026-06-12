@@ -12,6 +12,7 @@
     rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="intro-modal.css">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
 
     <!-- LEFT TEXT (unchanged) -->
     <div class="nav-left">
-      CINEMA • SPORT • LITERATURE
+      READ • WRITE • INSPIRE
     </div>
 
     <!-- RIGHT PILL -->
@@ -30,12 +31,12 @@
       <div class="logo-box">☀</div>
 
       <div class="nav-links">
-        <a href="./critique_website/main/movies.html">Movies</a>
-        <a href="./critique_website/main/sports.html">Sports</a>
-        <a href="./critique_website/main/books.html">Books</a>
+        <a href="movies.html">Cinema</a>
+        <a href="sports.html">Sports</a>
+        <a href="books.html">Books</a>
       </div>
 
-      <a href="./critique_website/main/about.html" class="cta-btn">
+      <a href="about.html" class="cta-btn">
         About →
       </a>
     </div>
@@ -46,9 +47,9 @@
 
     <!-- SLIDER -->
     <div class="hero-slider">
-      <img src="./critique_website/main/Screenshot (13).png" class="slide active">
-      <img src="./critique_website/main/hero-bg.png" class="slide">
-      <img src="./critique_website/main/Screenshot (14).png" class="slide">
+      <img src="hero-bg.png" class="slide active">
+      <img src="Screenshot (13).png" class="slide">
+      <img src="Screenshot (14).png" class="slide">
     </div>
 
     <div class="overlay"></div>
@@ -83,7 +84,8 @@
 
       <p class="perspective-text">
         Cinema, sport, and literature — not as categories, but as experiences that linger.
-        This is where I explore what resonates, question what endures, and write with clarity and intent.
+        This is where I explore what resonates, question what endures, and write with clarity and intent. Head over to
+        the sections below to dive deeper into each medium, or check out the latest reviews in the featured section.
       </p>
 
     </div>
@@ -111,27 +113,27 @@
       <h3 class="section-title">Explore the space</h3>
     </div>
 
-    <!-- MOVIES -->
+    <!-- Cinema -->
     <div class="section-block fade-up">
       <div class="section-image">
-        <img src="./critique_website/main/cinema.jpg" alt="">
+        <img src="cinema.jpg" alt="">
       </div>
 
       <div class="section-text">
         <span class="section-label">SECTION</span>
-        <h2>Movies</h2>
+        <h2>Cinema</h2>
         <p>
           Deep dives into cinema — from quiet arthouse gems to blockbuster spectacles.
           Every frame tells a story worth examining.
         </p>
-        <a href="./critique_website/main/movies.html" class="explore">Explore →</a>
+        <a href="movies.html" class="explore">Explore →</a>
       </div>
     </div>
 
     <!-- SPORTS (reverse) -->
     <div class="section-block reverse fade-up">
       <div class="section-image">
-        <img src="./critique_website/main/sports.avif" alt="">
+        <img src="sports.avif" alt="">
       </div>
 
       <div class="section-text">
@@ -141,14 +143,14 @@
           Beyond the scoreboard. Exploring the drama, beauty, and human stories
           that make sport a form of art.
         </p>
-        <a href="./critique_website/main/sports.html" class="explore">Explore →</a>
+        <a href="sports.html" class="explore">Explore →</a>
       </div>
     </div>
 
     <!-- BOOKS -->
     <div class="section-block fade-up">
       <div class="section-image">
-        <img src="./critique_website/main/books.avif" alt="">
+        <img src="books.avif" alt="">
       </div>
 
       <div class="section-text">
@@ -158,7 +160,23 @@
           Turning pages, uncovering worlds. Honest reflections on literature
           that lingers long after the final chapter.
         </p>
-        <a href="./critique_website/main/books.html" class="explore">Explore →</a>
+        <a href="books.html" class="explore">Explore →</a>
+      </div>
+    </div>
+
+    <!-- Book-Bits -->
+    <div class="section-block reverse fade-up">
+      <div class="section-image">
+        <img src="book-bits.jpg" alt="">
+      </div>
+
+      <div class="section-text">
+        <span class="section-label">SECTION</span>
+        <h2>Book Bits</h2>
+        <p>
+          Short, insightful pieces on literature that capture the essence of storytelling.
+        </p>
+        <a href="book-bits.html" class="explore">Explore →</a>
       </div>
     </div>
 
@@ -182,6 +200,30 @@
     </div>
 
   </section>
+
+  <!-- INTRO MODAL -->
+  <div id="intro-overlay" class="intro-overlay hidden" data-intro-key="homepageIntroSeen"
+    data-intro-label="PERSPECTIVES" data-intro-title="Welcome to Perspectives."
+    data-intro-text="This website is for people who believe learning exists everywhere.
+Cinema offers perspective, sports teach discipline and mentality, and books help us better understand ourselves and the world around us.
+
+Perspectives is a space for thoughtful analysis, honest reflection, and meaningful discussions about the ideas, values, and lessons we find in stories, people, and experiences.">
+
+    <div class="intro-modal">
+
+      <span class="intro-label"></span>
+
+      <h2 class="intro-title"></h2>
+
+      <p class="intro-text"></p>
+      <button id="intro-btn" class="intro-btn">
+        Enter
+      </button>
+
+    </div>
+
+  </div>
+
   <script>
     const section = document.querySelector('.perspective-section');
 
@@ -195,7 +237,7 @@
 
     observer.observe(section);
   </script>
-  <script type="module" src="./critique_website/main/js/script.js"></script>
+  <script type="module" src="./js/script.js"></script>
 </body>
 
 </html>
