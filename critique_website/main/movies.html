@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>movies</title>
   <link rel="stylesheet" href="movies.css">
+  <link rel="stylesheet" href="intro-modal.css">
 </head>
 
 <body data-category="movies">
@@ -13,7 +15,7 @@
 
     <!-- LEFT TEXT (unchanged) -->
     <div class="nav-left">
-      CINEMA • SPORT • LITERATURE
+      READ • WRITE • INSPIRE
     </div>
 
     <!-- RIGHT PILL -->
@@ -22,8 +24,8 @@
       <div class="logo-box">☀</div>
 
       <div class="nav-links">
-        <a href="../../index.html">Home</a>
-        <a href="movies.html">Movies</a>
+        <a href="index.html">Home</a>
+        <a href="movies.html">Cinema</a>
         <a href="sports.html">Sports</a>
         <a href="books.html">Books</a>
       </div>
@@ -41,24 +43,22 @@
 
     <div class="hero-content">
       <p class="section-label">CATEGORY</p>
-      <h1>Movies</h1>
+      <h1>Cinema</h1>
       <p class="subtitle">Cinema as memory, mood, and meaning.</p>
     </div>
   </section>
 
   <!-- ARTICLES -->
-  <section class="movies-grid"
-
-    <div id="blog-container" class="blog-container"></div>
-
+  <section class="movies-grid">
+    <div id="blog-container" class="blog-container"> </div>
   </section>
-  
+
   <footer class="footer">
     <p>"Bad times don't last but bad people do"</p>
     <span>— Scott Hall</span>
   </footer>
 
-    <!-- ADD BUTTON -->
+  <!-- ADD BUTTON -->
   <div class="add-btn" id="add-btn">+</div>
 
   <div class="add-hint" id="addHint">
@@ -76,6 +76,7 @@
       <input type="text" id="author-name" placeholder="Author Name" required>
 
       <input type="file" id="blog-image">
+
       <img id="image-preview" style="display:none; width:100%; border-radius:10px;">
 
       <textarea id="blog-content" placeholder="Write your insight..."></textarea>
@@ -88,7 +89,7 @@
     </div>
   </div>
 
-    <!-- BLOG DISPLAY -->
+  <!-- BLOG DISPLAY -->
 
   <div id="blog-view" class="fullscreen hidden">
     <div class="blog-view-box">
@@ -96,6 +97,27 @@
       <img id="view-image">
       <p id="view-content"></p>
     </div>
+  </div>
+
+  <!-- INTRO MODAL -->
+  <div id="intro-overlay" class="intro-overlay hidden" data-intro-key="homepageIntroSeen"
+    data-intro-label="PERSPECTIVES" data-intro-title="Welcome to the Cinema Section" data-intro-text=" Explore articles that delve into the world of cinema, offering honest reflections and learnings. Whether you're
+        a casual moviegoer or a dedicated cinephile, there's something here for everyone who loves the art of films and
+        series. You can add your own insights by clicking the &quot;+&quot; button at the bottom right. ">
+
+    <div class="intro-modal">
+
+      <span class="intro-label"></span>
+
+      <h2 class="intro-title"></h2>
+
+      <p class="intro-text"></p>
+      <button id="intro-btn" class="intro-btn">
+        Enter
+      </button>
+
+    </div>
+
   </div>
 
   <script type="module" src="js/script.js"></script>
