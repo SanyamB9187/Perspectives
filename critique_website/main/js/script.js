@@ -16,6 +16,10 @@ import {
   deleteObject
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
 
+// intro modal jsvascript file
+
+import "./intro-modal.js";
+
 // ==============================
 // DOM READY
 // ==============================
@@ -130,8 +134,8 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   if (window.location.pathname.includes("article.html")) {
-  loadArticle();
-}
+    loadArticle();
+  }
 
   if (document.body.classList.contains("book-bits-page")) {
     renderBookBits();
