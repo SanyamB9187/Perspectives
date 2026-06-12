@@ -18,7 +18,7 @@ import {
 
 // intro modal jsvascript file
 
-import "./intro-modal.js";
+import "intro-modal.js";
 
 // ==============================
 // DOM READY
