@@ -5,7 +5,7 @@ import { renderHomepageArticles } from "./pages/home.js";
 import { renderBookBits, saveBookBit } from "./pages/bookbits.js";
 import { initSlider } from "./ui/slider.js";
 import { initEditor, openEditor, closeEditor, getSelectedImage } from "./ui/editor.js";
-import "intro-modal.js";
+import "./intro-modal.js";
 import {
   doc,
   getDoc,
